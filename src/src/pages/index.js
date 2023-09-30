@@ -41,19 +41,20 @@ export default function Home () {
             description="Description will go into a meta tag in <head />">
 
             <header className={clsx('hero hero--primary', styles.heroBanner)}>
-                <div className='container'>
-                    <h1 className='hero__title'>{siteConfig.title}</h1>
-                    <p className='hero--subtitle'>{siteConfig.tagLine}</p>
+                <div className="container">
+                    <h1 className="hero__title">{siteConfig.title}</h1>
+                    <p className="hero--subtitle">{siteConfig.tagLine}</p>
                     <div className={styles.buttons}>
                         {
-                            userInfo ? 
-                                (<p>Hello {userInfo.userDetails}</p>) :
+                            userInfo ? (
+                                <p>Hello {userInfo.userDetails}</p>
+                                ) : (
                                 <a 
                                     className='button button-secondary button-lg'
                                     href="/.auth/login/github"
                                 >
                                     Click here to login
-                                </a>
+                                </a>)
                         }
                     </div>
                 </div>
