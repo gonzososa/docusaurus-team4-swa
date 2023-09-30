@@ -20,7 +20,7 @@ function useUserInfo () {
 
     useEffect (() => {
         async function getUserInfo () {
-            const response = await fetch ('./auth/me');
+            const response = await fetch ('/.auth/me');
             const payload = await response.json ();
             const { clientPrincipal } = payload;
 
@@ -50,7 +50,7 @@ export default function Home () {
                                 (<p>Hello {userInfo.userDetails}</p>) :
                                 <a 
                                     className='button button-secondary button-lg'
-                                    href="./auth/login/github"
+                                    href="/.auth/login/github"
                                 >
                                     Click here to login
                                 </a>
