@@ -29,6 +29,8 @@ function useUserInfo () {
 
         getUserInfo().then((ui) => setUserInfo(ui));
     }, []);
+
+    return userInfo;
 }
 
 export default function Home () {
