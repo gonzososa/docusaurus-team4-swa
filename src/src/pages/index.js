@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.modules.css';
+import styles from './index.module.css';
 
 /**
  * @typedef {object} UserInfo
@@ -26,13 +26,13 @@ function useUserInfo () {
 
             return clientPrincipal;
         }
-    }, []);
 
-    getUserInfo().then((ui) => setUserInfo(ui));
+        getUserInfo().then((ui) => setUserInfo(ui));
+    }, []);
 }
 
 export default function Home () {
-    const { siteConfig } = userDocusaurusContext ();
+    const { siteConfig } = useDocusaurusContext ();
     const userInfo = useUserInfo ();
 
     return (
