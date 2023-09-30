@@ -46,15 +46,19 @@ export default function Home () {
                     <p className="hero--subtitle">{siteConfig.tagline}</p>
                     <div className={styles.buttons}>
                         {
-                            userInfo ? (
-                                <p>Hello {userInfo.userDetails}</p>
-                                ) : (
-                                <a 
-                                    className='button button-secondary button-lg'
-                                    href="/.auth/login/github"
-                                >
-                                    Click here to login
-                                </a>)
+                            userInfo ? 
+                                (
+                                    <p>Hello {userInfo.userDetails}</p>
+                                ) 
+                                : 
+                                (
+                                    <a 
+                                        className='button button--secondary button--lg'
+                                        href="/.auth/login/github"
+                                    >
+                                        Click here to login
+                                    </a>
+                                )
                         }
                     </div>
                 </div>
