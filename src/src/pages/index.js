@@ -39,11 +39,11 @@ export default function Home () {
         <Layout 
             title={`Hello from ${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
-            console.log(siteConfig);
+
             <header className={clsx('hero hero--primary', styles.heroBanner)}>
                 <div className="container">
                     <h1 className="hero__title">{siteConfig.title}</h1>
-                    <p className="hero--subtitle">{siteConfig.tagLine}</p>
+                    <p className="hero--subtitle">{siteConfig.tagline}</p>
                     <div className={styles.buttons}>
                         {
                             userInfo ? (
